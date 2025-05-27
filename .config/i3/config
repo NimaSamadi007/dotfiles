@@ -274,7 +274,7 @@ default_floating_border pixel 0
 
 # class                 border  backgr. text    indicator child_border
 #client.focused          #61759c #61759c #ffffff #61759c #285577
-client.focused          #F0C674 #F0C674 #181818 #F0C674 #285577
+client.focused          #5294e2 #5294e2 #ffffff #5294e2   #285577
 client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
 client.unfocused        #333333 #222222 #888888 #292d2e   #222222
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
