@@ -1,0 +1,14 @@
+[Unit]
+Description=Set custom xmodmap
+After=graphical-session.target
+
+[Service]
+ExecStart=/usr/bin/xmodmap /home/nima/.Xmodmap
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=%h/.Xauthority
+Type=oneshot
+RemainAfterExit=yes
+
+[Install]
+WantedBy=default.target
+
