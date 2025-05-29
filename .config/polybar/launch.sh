@@ -7,8 +7,8 @@
   while pgrep -u $UID -x polybar > /dev/null; do sleep 0.5; done
 
   outputs=$(xrandr --query | grep " connected" | cut -d" " -f1)
-  #tray_output="HDMI-1-0"
-  tray_output="eDP"
+  tray_output="HDMI-1-0"
+  #tray_output="eDP"
 
   for m in $outputs; do
     if [[ $m == "HDMI-1-0" ]]; then
