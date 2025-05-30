@@ -238,10 +238,10 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # My configs
 bindsym $mod+d move workspace to output right
-bindsym $mod+Prior workspace prev 
-bindsym $mod+KP_Prior workspace prev
-bindsym $mod+Next workspace next
-bindsym $mod+KP_Next workspace next 
+bindsym $mod+Prior workspace prev_on_output
+bindsym $mod+KP_Prior workspace prev_on_output
+bindsym $mod+Next workspace next_on_output
+bindsym $mod+KP_Next workspace next_on_output
 
 bindsym $mod+Control+Left resize shrink width 2 px or 2 ppt
 bindsym $mod+Control+Down resize grow height 2 px or 2 ppt
