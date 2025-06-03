@@ -302,6 +302,10 @@ bindsym $mod+BackSpace exec --no-startup-id "/home/nima/.config/greenclip clear"
 
 exec_always --no-startup-id picom --config ~/.config/picom.conf -b
 exec_always --no-startup-id blueman-applet>/dev/null 2>&1
+exec --no-startup-id xinput set-prop "ASUE120A:00 04F3:319B Touchpad" "libinput Natural Scrolling Enabled" 1
+exec --no-startup-id xinput set-prop "ASUE120A:00 04F3:319B Touchpad" "libinput Tapping Enabled" 1
+exec --no-startup-id setxkbmap -option caps:hyper
+
 #exec_always --no-startup-id xfsettingsd
 
 gaps inner 7
