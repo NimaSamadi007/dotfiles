@@ -147,5 +147,7 @@ function to_file() {
 export EDITOR=/usr/bin/nvim
 alias nvi="nvim"
 alias dotfile="git --git-dir=/home/nima/Documents/dotfiles --work-tree=/home/nima"
+alias azeroth="ssh azeroth"
+alias b3ast="ssh b3ast-server"
 
 . "$HOME/.local/bin/env"
