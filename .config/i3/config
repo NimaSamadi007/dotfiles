@@ -55,6 +55,7 @@ tiling_drag modifier titlebar
 
 # start a terminal
 bindsym $mod+Return exec terminator
+bindsym $mod+mod2+KP_Enter exec terminator
 
 # kill focused window
 bindsym $mod+w kill
@@ -63,6 +64,7 @@ bindsym $mod+w kill
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 bindsym $mod+p exec --no-startup-id /home/nima/.config/rofi/scripts/launcher_t1
 bindsym $mod+l exec --no-startup-id /home/nima/.config/rofi/scripts/powermenu_t1
+bindsym $mod+t exec --no-startup-id /home/nima/.config/rofi/scripts/window
 
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
@@ -164,15 +166,25 @@ bindsym $mod+mod2+KP_0 workspace number $ws10
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+KP_End move container to workspace number $ws1
 bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+KP_Down move container to workspace number $ws2
 bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+KP_Next move container to workspace number $ws3
 bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+KP_Left move container to workspace number $ws4
 bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+KP_Begin move container to workspace number $ws5
 bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+KP_Right move container to workspace number $ws6
 bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+KP_Home move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+KP_Up move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+KP_Prior move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
+bindsym $mod+Shift+KP_Insert move container to workspace number $ws10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -264,11 +276,13 @@ for_window [class="Thunar"] resize set 640 px 480 px
 for_window [window_role="(?i)GtkFileChooserDialog"] resize set 640 px 480 px 
 #for_window [class=".*"] resize set 640 px 480 px
 
-for_window [class="Slack"] border normal
-for_window [class="bombsquad"] border normal
+#for_window [class="Slack"] border normal
+#for_window [class="bombsquad"] border normal
+for_window [all] title_window_icon on
+for_window [all] title_window_icon padding 5px
 
-default_border pixel 0
-default_floating_border pixel 0
+#default_border pixel 0
+#default_floating_border pixel 0
 
 #floating_minimum_size 200 x 200
 #floating_maximum_size 1500 x 1500

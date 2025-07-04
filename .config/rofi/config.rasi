@@ -104,6 +104,8 @@ configuration {
     }
 
 	/*---------- Keybindings ----------*/
+        kb-mode-next: "Alt+Right";
+        kb-mode-previous: "Alt+Left";
 /*
 	kb-primary-paste: "Control+V,Shift+Insert";
 	kb-secondary-paste: "Control+v,Insert";
