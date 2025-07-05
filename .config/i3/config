@@ -276,13 +276,13 @@ for_window [class="Thunar"] resize set 640 px 480 px
 for_window [window_role="(?i)GtkFileChooserDialog"] resize set 640 px 480 px 
 #for_window [class=".*"] resize set 640 px 480 px
 
-#for_window [class="Slack"] border normal
-#for_window [class="bombsquad"] border normal
+for_window [class="Slack"] border normal
+for_window [class="bombsquad"] border normal
 for_window [all] title_window_icon on
 for_window [all] title_window_icon padding 5px
 
-#default_border pixel 0
-#default_floating_border pixel 0
+default_border pixel 0
+default_floating_border pixel 0
 
 #floating_minimum_size 200 x 200
 #floating_maximum_size 1500 x 1500
