@@ -298,7 +298,8 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 client.background       #ffffff
 
 #exec_always --no-startup-id feh --bg-scale /home/nima/Pictures/F40-01-day-compressed.png
-exec_always --no-startup-id nitrogen --restore
+#exec_always --no-startup-id nitrogen --restore
+exec_always --no-startup-id /home/nima/.config/scripts/set-wallpaper.sh
 exec_always --no-startup-id i3-autolayout autolayout
 exec_always --no-startup-id /home/nima/.config/greenclip daemon>/dev/null
 exec_always "setxkbmap -model pc104 -layout us,ir -variant ,, -option grp:win_space_toggle"
