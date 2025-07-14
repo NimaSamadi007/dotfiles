@@ -16,6 +16,13 @@
     fi
   done
 
+  # Wait for PipeWire's PulseAudio interface
+  until pactl info >/dev/null 2>&1; do
+    echo "Waiting for PulseAudio (via PipeWire)..."
+    sleep 0.5
+  done
+
+
   for m in $outputs; do
     export MONITOR=$m
     export TRAY_POSITION=none
