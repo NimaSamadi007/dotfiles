@@ -149,5 +149,6 @@ alias nvi="nvim"
 alias dotfile="git --git-dir=/home/nima/Documents/dotfiles --work-tree=/home/nima"
 alias azeroth="ssh azeroth"
 alias b3ast="ssh b3ast-server"
+alias open="xdg-open"
 
 . "$HOME/.local/bin/env"

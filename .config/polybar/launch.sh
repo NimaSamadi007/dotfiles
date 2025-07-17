@@ -6,9 +6,10 @@
 
   while pgrep -u $UID -x polybar > /dev/null; do sleep 0.5; done
 
-  outputs=$(xrandr --query | grep " connected" | cut -d" " -f1)
-  tray_output="HDMI-1-0"
-  #tray_output="eDP"
+  #outputs=$(xrandr --query | grep " connected" | cut -d" " -f1)
+  outputs=$(xrandr --listactivemonitors | tail -n +2 | awk '{print $NF}')
+  #tray_output="HDMI-1-0"
+  tray_output="eDP"
 
   for m in $outputs; do
     if [[ $m == "HDMI-1-0" ]]; then
@@ -16,13 +17,7 @@
     fi
   done
 
-  # Wait for PipeWire's PulseAudio interface
-  until pactl info >/dev/null 2>&1; do
-    echo "Waiting for PulseAudio (via PipeWire)..."
-    sleep 0.5
-  done
-
-
+  
   for m in $outputs; do
     export MONITOR=$m
     export TRAY_POSITION=none

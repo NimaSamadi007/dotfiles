@@ -63,7 +63,7 @@ bindsym $mod+w kill
 # start dmenu (a program launcher)
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 bindsym $mod+p exec --no-startup-id /home/nima/.config/rofi/scripts/launcher_t1
-bindsym $mod+l exec --no-startup-id /home/nima/.config/rofi/scripts/powermenu_t1
+bindsym $mod+o exec --no-startup-id /home/nima/.config/rofi/scripts/powermenu_t1
 bindsym $mod+t exec --no-startup-id /home/nima/.config/rofi/scripts/window
 
 # A more modern dmenu replacement is rofi:
@@ -73,10 +73,10 @@ bindsym $mod+t exec --no-startup-id /home/nima/.config/rofi/scripts/window
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-#bindsym $mod+j focus left
-#bindsym $mod+k focus down
-#bindsym $mod+l focus up
-#bindsym $mod+semicolon focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -85,10 +85,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -97,7 +97,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+g split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -112,7 +112,7 @@ bindsym $mod+x layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+j floating toggle
+bindsym $mod+semicolon floating toggle
 
 # change focus between tiling / floating windows
 #bindsym $mod+space focus mode_toggle
@@ -259,6 +259,10 @@ bindsym $mod+Control+Down resize grow height 2 px or 2 ppt
 bindsym $mod+Control+Up resize shrink height 2 px or 2 ppt
 bindsym $mod+Control+Right resize grow width 2 px or 2 ppt
 
+bindsym $mod+Control+h resize shrink width 2 px or 2 ppt
+bindsym $mod+Control+j resize grow height 2 px or 2 ppt
+bindsym $mod+Control+k resize shrink height 2 px or 2 ppt
+bindsym $mod+Control+l resize grow width 2 px or 2 ppt
 
 for_window [window_role="About"] floating enable
 for_window [window_role="Organizer"] floating enable
@@ -299,7 +303,6 @@ client.background       #ffffff
 #exec_always --no-startup-id feh --bg-scale /home/nima/Pictures/F40-01-day-compressed.png
 #exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id /home/nima/.config/scripts/set-wallpaper.sh
-exec_always --no-startup-id i3-autolayout autolayout
 exec_always --no-startup-id /home/nima/.config/greenclip daemon>/dev/null
 exec_always "setxkbmap -model pc105 -layout us,ir -variant ,pes -option grp:win_space_toggle"
 #exec --no-startup-id betterlockscreen -l
@@ -307,7 +310,7 @@ exec_always --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=s
 exec_always --no-startup-id /usr/libexec/polkit-gnome-authentication-agent-1 >/dev/null 2>&1
 
 bindsym $mod+y exec --no-startup-id terminator -e /home/nima/scripts/yazi-run.sh>/dev/null 2>/dev/null
-bindsym $mod+k exec --no-startup-id env XDG_CURRENT_DESKTOP=GNOME nautilus --no-desktop>/dev/null 2>/dev/null
+bindsym $mod+i exec --no-startup-id env XDG_CURRENT_DESKTOP=GNOME nautilus --no-desktop>/dev/null 2>/dev/null
 bindsym Shift+Print exec --no-startup-id /home/nima/.config/rofi/applets/bin/screenshot.sh >/dev/null 2>/dev/null
 bindsym $mod+q exec --no-startup-id rofi -theme "$HOME/.config/rofi/applets/type-1/style-2.rasi"  -show rofi-sound -modi "rofi-sound:/home/nima/.config/rofi-sound/rofi-sound-output-chooser"
 bindsym $mod+c exec --no-startup-id rofi -theme "$HOME/.config/rofi/launchers/type-1/style-2.rasi" -modi "clipboard:/home/nima/.config/greenclip print" -show clipboard -run-command '{cmd}' 
@@ -321,6 +324,7 @@ exec --no-startup-id xinput set-prop "ASUE120A:00 04F3:319B Touchpad" "libinput 
 #exec --no-startup-id setxkbmap -option caps:hyper
 
 #exec_always --no-startup-id xfsettingsd
+exec_always --no-startup-id i3-autolayout autolayout
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 gaps inner 7

@@ -4,9 +4,19 @@
   ask_before_closing = never
   always_split_with_profile = True
 [keybindings]
+  go_up = <Alt>k
+  go_down = <Alt>j
+  go_left = <Alt>h
+  go_right = <Alt>l
   split_horiz = <Primary>quotedbl
   split_vert = <Primary>percent
-  reset_clear = <Primary><Shift>l
+  resize_up = <Primary><Shift>k
+  resize_down = <Primary><Shift>j
+  resize_left = <Primary><Shift>h
+  resize_right = <Primary><Shift>l
+  reset_clear = ""
+  layout_launcher = <Primary>comma
+  preferences_keybindings = ""
 [profiles]
   [[default]]
     audible_bell = True
