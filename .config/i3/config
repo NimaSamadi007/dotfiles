@@ -106,8 +106,8 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-#bindsym $mod+s layout stacking
-bindsym $mod+s layout toggle tabbed split
+bindsym $mod+y layout stacking
+bindsym $mod+Tab layout toggle tabbed split
 bindsym $mod+x layout tabbed
 bindsym $mod+e layout toggle split
 
@@ -309,7 +309,7 @@ exec_always "setxkbmap -model pc105 -layout us,ir -variant ,pes -option grp:win_
 exec_always --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=secrets
 exec_always --no-startup-id /usr/libexec/polkit-gnome-authentication-agent-1 >/dev/null 2>&1
 
-bindsym $mod+y exec --no-startup-id terminator -e /home/nima/scripts/yazi-run.sh>/dev/null 2>/dev/null
+#bindsym $mod+y exec --no-startup-id terminator -e /home/nima/scripts/yazi-run.sh>/dev/null 2>/dev/null
 bindsym $mod+i exec --no-startup-id env XDG_CURRENT_DESKTOP=GNOME nautilus --no-desktop>/dev/null 2>/dev/null
 bindsym Shift+Print exec --no-startup-id /home/nima/.config/rofi/applets/bin/screenshot.sh >/dev/null 2>/dev/null
 bindsym $mod+q exec --no-startup-id rofi -theme "$HOME/.config/rofi/applets/type-1/style-2.rasi"  -show rofi-sound -modi "rofi-sound:/home/nima/.config/rofi-sound/rofi-sound-output-chooser"
