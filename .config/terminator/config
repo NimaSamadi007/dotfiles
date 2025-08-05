@@ -4,12 +4,16 @@
   ask_before_closing = never
   always_split_with_profile = True
 [keybindings]
+  go_up = <Alt>k
+  go_down = <Alt>j
+  go_left = <Alt>h
+  go_right = <Alt>l
   split_horiz = <Primary>quotedbl
   split_vert = <Primary>percent
-  resize_up = <Primary><Shift>Up
-  resize_down = <Primary><Shift>Down
-  resize_left = <Primary><Shift>Left
-  resize_right = <Primary><Shift>Right
+  resize_up = <Primary><Shift>k
+  resize_down = <Primary><Shift>j
+  resize_left = <Primary><Shift>h
+  resize_right = <Primary><Shift>l
   reset_clear = ""
   layout_launcher = <Primary>comma
   preferences_keybindings = ""

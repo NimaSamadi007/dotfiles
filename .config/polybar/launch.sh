@@ -23,9 +23,12 @@
     export TRAY_POSITION=none
     if [[ $m == $tray_output ]]; then
       TRAY_POSITION=right
+      BAR_NAME=main
+    else
+      BAR_NAME=laptop
     fi
 
-    polybar --reload main </dev/null >/var/tmp/polybar-$m.log 2>&1 200>&- &
+    polybar --reload $BAR_NAME </dev/null >/var/tmp/polybar-$m.log 2>&1 200>&- &
     disown
   done
 ) 200>/var/tmp/polybar-launch.lock
