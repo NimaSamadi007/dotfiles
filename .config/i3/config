@@ -63,7 +63,7 @@ bindsym $mod+w kill
 # start dmenu (a program launcher)
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 bindsym $mod+p exec --no-startup-id /home/nima/.config/rofi/scripts/launcher_t1
-bindsym $mod+o exec --no-startup-id /home/nima/.config/rofi/scripts/powermenu_t1
+bindsym $mod+l exec --no-startup-id /home/nima/.config/rofi/scripts/powermenu_t1
 bindsym $mod+t exec --no-startup-id /home/nima/.config/rofi/scripts/window
 
 # A more modern dmenu replacement is rofi:
@@ -72,23 +72,11 @@ bindsym $mod+t exec --no-startup-id /home/nima/.config/rofi/scripts/window
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
-# change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
-
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
-
-# move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -107,7 +95,7 @@ bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+y layout stacking
-bindsym $mod+Tab layout toggle tabbed split
+bindsym $mod+s layout toggle tabbed split
 bindsym $mod+x layout tabbed
 bindsym $mod+e layout toggle split
 
@@ -310,7 +298,7 @@ exec_always --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=s
 exec_always --no-startup-id /usr/libexec/polkit-gnome-authentication-agent-1 >/dev/null 2>&1
 
 #bindsym $mod+y exec --no-startup-id terminator -e /home/nima/scripts/yazi-run.sh>/dev/null 2>/dev/null
-bindsym $mod+i exec --no-startup-id env XDG_CURRENT_DESKTOP=GNOME nautilus --no-desktop>/dev/null 2>/dev/null
+bindsym $mod+k exec --no-startup-id env XDG_CURRENT_DESKTOP=GNOME nautilus --no-desktop>/dev/null 2>/dev/null
 bindsym Shift+Print exec --no-startup-id /home/nima/.config/rofi/applets/bin/screenshot.sh >/dev/null 2>/dev/null
 bindsym $mod+q exec --no-startup-id rofi -theme "$HOME/.config/rofi/applets/type-1/style-2.rasi"  -show rofi-sound -modi "rofi-sound:/home/nima/.config/rofi-sound/rofi-sound-output-chooser"
 bindsym $mod+c exec --no-startup-id rofi -theme "$HOME/.config/rofi/launchers/type-1/style-2.rasi" -modi "clipboard:/home/nima/.config/greenclip print" -show clipboard -run-command '{cmd}' 
@@ -322,11 +310,12 @@ exec_always --no-startup-id picom --config ~/.config/picom.conf -b
 exec_always --no-startup-id blueman-applet>/dev/null 2>&1
 exec --no-startup-id xinput set-prop "ASUE120A:00 04F3:319B Touchpad" "libinput Natural Scrolling Enabled" 1
 exec --no-startup-id xinput set-prop "ASUE120A:00 04F3:319B Touchpad" "libinput Tapping Enabled" 1
-exec_always --no-startup-id setxkbmap -option caps:hyper
+#exec_always --no-startup-id setxkbmap -option caps:hyper
 
 #exec_always --no-startup-id xfsettingsd
 exec_always --no-startup-id i3-autolayout autolayout
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+#exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id sh -c 'sleep 1 && ~/.config/polybar/launch.sh'
 
 gaps inner 7
 gaps outer 0
